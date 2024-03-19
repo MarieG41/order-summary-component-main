@@ -1,0 +1,174 @@
+/**
+* SassQueries
+* Manage media-queries in Sass easily.
+*
+* @author     Samuel Marchal (zessx)
+* @version    0.3
+*/
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Bright-blue-tr: hsla(245, 75%, 52%, 0.735);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  --light-weight: 500;
+  --mid-weight: 700;
+  --heavy-weight: 900;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url("images/pattern-background-desktop.svg");
+  background-color: var(--Pale-blue);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+@media all and (max-width: 767px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+body main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+body p {
+  font-size: 16px;
+}
+
+.img-hero img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+@media all and (max-width: 767px) {
+  .img-hero {
+    display: flex;
+    justify-content: center;
+  }
+  .img-hero img {
+    width: 93.5%;
+  }
+}
+
+section {
+  background-color: white;
+  width: 450px;
+  text-align: center;
+  padding: 35px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+@media all and (max-width: 767px) {
+  section {
+    width: 93.5%;
+    -webkit-box-shadow: 0px 16px 30px -6px var(--Desaturated-blue);
+    box-shadow: 0px 16px 30px -6px var(--Desaturated-blue);
+  }
+}
+section .title-paragraph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .title-paragraph h1 {
+  font-size: 32px;
+  font-weight: var(--heavy-weight);
+  padding-bottom: 20px;
+  color: var(--Dark-blue);
+}
+@media all and (max-width: 767px) {
+  section .title-paragraph h1 {
+    font-size: 26px;
+  }
+}
+section .title-paragraph p {
+  font-weight: var(--light-weight);
+  width: 350px;
+  padding-bottom: 15px;
+  line-height: 150%;
+  color: var(--Desaturated-blue);
+}
+@media all and (max-width: 767px) {
+  section .title-paragraph p {
+    width: 275px;
+  }
+}
+section .price-plan {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.5fr;
+  width: 300px;
+  background-color: var(--Very-pale-blue);
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: left;
+  column-gap: 20px;
+  padding: 20px 15px;
+  margin-bottom: 30px;
+}
+@media all and (max-width: 767px) {
+  section .price-plan {
+    grid-template-columns: 0.1fr 0.75fr 0.25fr;
+    padding: 20px 5px;
+  }
+}
+section .price-plan h3 {
+  font-weight: var(--heavy-weight);
+  padding-bottom: 8px;
+  color: var(--Dark-blue);
+}
+section .price-plan p {
+  color: var(--Desaturated-blue);
+}
+section .price-plan a {
+  color: var(--Bright-blue);
+  font-weight: var(--heavy-weight);
+}
+section .price-plan a:hover {
+  color: var(--Bright-blue-tr);
+  text-decoration: none;
+}
+section .choices-btn {
+  display: flex;
+  flex-direction: column;
+}
+section .choices-btn button {
+  color: var(--Very-pale-blue);
+  font-weight: var(--mid-weight);
+  background-color: var(--Bright-blue);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 100px;
+  font-family: "Red Hat Display", sans-serif;
+  margin-bottom: 32px;
+  -webkit-box-shadow: 0px 16px 30px -6px var(--Desaturated-blue);
+  box-shadow: 0px 16px 30px -6px var(--Desaturated-blue);
+  font-size: 16px;
+}
+@media all and (max-width: 767px) {
+  section .choices-btn button {
+    padding: 15px 75px;
+  }
+}
+section .choices-btn button:hover {
+  background-color: var(--Bright-blue-tr);
+}
+section .choices-btn a {
+  color: var(--Desaturated-blue);
+  font-weight: var(--mid-weight);
+  text-decoration: none;
+}
+section .choices-btn a:hover {
+  color: var(--Dark-blue);
+}
+
+/*# sourceMappingURL=style.css.map */
